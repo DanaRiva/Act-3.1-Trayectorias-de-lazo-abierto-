@@ -4,8 +4,8 @@ close all
 clc
 
 %%%%%%%%%%%%%%%%%%%%%%%%% TIEMPO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-tf=8;             % Tiempo de simulación en segundos (s)
-ts=.05;            % Tiempo de muestreo en segundos (s)
+tf=9.5;             % Tiempo de simulación en segundos (s)
+ts=.1;            % Tiempo de muestreo en segundos (s)
 t=0:ts:tf;         % Vector de tiempo
 N= length(t);     % Muestras
 
@@ -33,10 +33,8 @@ hy(1)= y1(1);       % Posición del punto de control en el eje (Y) metros (m)
 
 %%%%%%%%%%%%%%%%%%%%%% VELOCIDADES DE REFERENCIA %%%%%%%%%%%%%%%%%%%%%%%%%%
  
-v=[1*ones(1,20) 0*ones(1,20) 1*ones(1,20) 0*ones(1,20) 1*ones(1,20) 0*ones(1,20) 1*ones(1,20) 0*ones(1,21)];
-w=[0*ones(1,20) pi/2*ones(1,20) 0*ones(1,20) pi/2*ones(1,20) 0*ones(1,20) pi/2*ones(1,20) 0*ones(1,20) pi/2*ones(1,21)];
-
-
+v = [0*ones(1,10) 1*ones(1,10) 0*ones(1,10) 1*ones(1,10) 0*ones(1,10) 1*ones(1,15) 0*ones(1,10) 1*ones(1,21)]; 
+w = [pi/6*ones(1,10) 0*ones(1,10) 2/3*pi*ones(1,10) 0*ones(1,10) -2/3*pi*ones(1,10) 0*ones(1,15) -pi/2*ones(1,10) 0*ones(1,21)];
 
  % Velocidad angular de referencia (rad/s)
 
